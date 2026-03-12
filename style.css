@@ -89,7 +89,7 @@ section {
 
 .heading span {
     color: var(--accent);
-    font-size: inherit;
+    font-size: inherit; /* Maintient la taille correcte */
 }
 
 /* --- ACCUEIL (HOME) --- */
@@ -159,7 +159,7 @@ section {
     box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
 }
 
-/* Boutons */
+/* --- BOUTONS --- */
 .btn {
     display: inline-block;
     padding: 0.8rem 2.2rem;
@@ -177,6 +177,18 @@ section {
     background: var(--accent-hover);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+/* Groupe de boutons (CV et Tableau E5) */
+.btn-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap; /* Permet de passer à la ligne sur petit écran */
+}
+
+.btn-group .btn {
+    margin-top: 0; /* Annule la marge par défaut pour un alignement parfait */
 }
 
 /* --- À PROPOS --- */
@@ -337,6 +349,7 @@ strong { color: var(--text-title); }
     .about-content h2 { text-align: center; }
     .home-content p, .about-content p { margin: 0 auto 2rem; }
     .social-media { justify-content: center; }
+    .btn-group { justify-content: center; } /* Centre les boutons sur tablette */
 }
 
 @media (max-width: 768px) {
